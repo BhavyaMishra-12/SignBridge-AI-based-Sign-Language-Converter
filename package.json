@@ -1,0 +1,25 @@
+{
+  "name": "signbridge-web",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite --config vite.config.js",
+    "build": "vite build --config vite.config.js",
+    "build:css": "tailwindcss -i ./public/tailwind.input.css -o ./public/tailwind.css --minify"
+  },
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001810",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.468.0",
+    "motion-dom": "^13.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.17",
+    "vite": "^5.4.10"
+  }
+}

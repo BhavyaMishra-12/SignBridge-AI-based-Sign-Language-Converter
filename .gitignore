@@ -1,0 +1,14 @@
+.venv/
+mp_env/
+__pycache__/
+tf_env/
+models/*.keras
+models/*labels.json
+models/*training_metrics.json
+venv/
+*.py[cod]
+.env
+.DS_Store
+Thumbs.db
+web-server.*.log
+node_modules/

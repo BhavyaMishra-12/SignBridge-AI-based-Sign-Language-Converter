@@ -1,0 +1,50 @@
+/* Moving refractive light layers for the liquid-glass theme. */
+.liquid-field {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.liquid-field i {
+  position: absolute;
+  width: 38vw;
+  height: 38vw;
+  border-radius: 46% 54% 63% 37%/42% 38% 62% 58%;
+  filter: blur(2px);
+  opacity: 0.52;
+  mix-blend-mode: screen;
+  animation: liquid-drift 16s ease-in-out infinite alternate;
+}
+.liquid-field i:first-child {
+  left: -13vw;
+  top: 33vh;
+  background: radial-gradient(circle at 35% 30%, #79f6e5cc, transparent 64%);
+}
+.liquid-field i:nth-child(2) {
+  right: -13vw;
+  top: -7vw;
+  background: radial-gradient(circle at 45% 50%, #bb9affb8, transparent 66%);
+  animation-delay: -5s;
+}
+.liquid-field i:nth-child(3) {
+  left: 38vw;
+  bottom: -20vw;
+  background: radial-gradient(circle at 50% 45%, #7abaffae, transparent 66%);
+  animation-delay: -10s;
+}
+@keyframes liquid-drift {
+  0% {
+    transform: translate3d(-2%, 0, 0) rotate(0deg) scale(0.92);
+    border-radius: 46% 54% 63% 37%/42% 38% 62% 58%;
+  }
+  100% {
+    transform: translate3d(8%, -7%, 0) rotate(28deg) scale(1.14);
+    border-radius: 61% 39% 40% 60%/57% 62% 38% 43%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .liquid-field i {
+    animation: none;
+  }
+}
